@@ -1,0 +1,66 @@
+{
+  "name": "v9u-smb2",
+  "description": "smb2,support ntlm2.Base project https://github.com/Node-SMB/marsaud-smb2",
+  "homepage": "https://github.com/v9u/v9u-smb2",
+  "version": "1.0.6",
+  "engines": {
+    "node": ">=10"
+  },
+  "author": {
+    "name": "v9u",
+    "email": "2808949242@qq.com",
+    "url": "https://github.com/v9u"
+  },
+  "types": "index.d.ts",
+  "main": "lib/smb2.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v9u/v9u-smb2"
+  },
+  "dependencies": {
+    "ntlm2": "^0.3.0",
+    "readable-stream": "^3.6.0"
+  },
+  "keywords": [
+    "SMB",
+    "SMB2",
+    "SMB3",
+    "NTLM",
+    "NTLM2",
+    "CIFS",
+    "Samba"
+  ],
+  "scripts": {
+    "test": "tap ./test"
+  },
+  "devDependencies": {
+    "@iarna/toml": "^2.2.5",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "get-stream": "^5.2.0",
+    "golike-defer": "^0.5.1",
+    "husky": "^2.7.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^1.19.1",
+    "promise-toolbox": "^0.18.1",
+    "tap": "^16.3.0"
+  },
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md,ts}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": "eslint"
+  }
+}
